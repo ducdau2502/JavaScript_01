@@ -7,14 +7,14 @@ function getInputValue() {
 
 function getTextContent(operator, current, input) {
     let content = `${current} ${operator} ${input}`;
-    outputResult(currentResult, content)
+    outputResult(currentResult, content);
 }
 
 function add() {
     let inputValue = getInputValue();
-    let initial = currentResult
+    let initial = currentResult;
     currentResult += inputValue;
-    getTextContent('+', initial, inputValue)
+    getTextContent('+', initial, inputValue);
     logEntries.push({
         operator: '+',
         number: inputValue
@@ -23,23 +23,23 @@ function add() {
 
 function subtract() {
     let inputValue = getInputValue();
-    let initial = currentResult
+    let initial = currentResult;
     currentResult -= inputValue;
-    getTextContent('-', initial, inputValue)
+    getTextContent('-', initial, inputValue);
 }
 
 function multiply() {
-    let initial = currentResult
+    let initial = currentResult;
     let inputValue = getInputValue();
     currentResult *= inputValue;
-    getTextContent('*', initial, inputValue)
+    getTextContent('*', initial, inputValue);
 }
 
 function divide() {
-    let initial = currentResult
+    let initial = currentResult;
     let inputValue = getInputValue();
     currentResult /= inputValue;
-    getTextContent('/', initial, inputValue)
+    getTextContent('/', initial, inputValue);
 }
 
 addBtn.addEventListener('click', add);
